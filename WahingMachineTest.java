@@ -9,9 +9,9 @@ public class WashingMachineTest {
 		Electricity electricity = new Electricity("AC",30f,2.3,40,"Ramesh");
 	
 		WashingMachine washingMachine = new WashingMachine();
-		Cloth[] cloth = null;
+		Cloth[] cloth = new Cloth[2];
 		cloth[0] = new Cloth("cotton","blue",34,"pant",false);
-		cloth[1] = new Cloth("cotton","blue",34,"pant",false);
+		cloth[1] = new Cloth("silk","black",24,"shirt",false);
 		
 //		int per = getPercen(value);
 		Laundry laundry = washingMachine.wash(washPowder,water,electricity,cloth);
@@ -25,6 +25,7 @@ class Machine {
 class WashingMachine extends Machine { //isA
 	
 	WashingTub washTub = new WashingTub(); //hasA
+		
 	
 	
 		Laundry wash(WashingPowder washPowder, Water water, Electricity electricity, Cloth cloth[]) {
@@ -287,7 +288,7 @@ class Electricity {
 		super();
 		this.type = type;
 		this.voltage = voltage;
-		this.costPerUnit = d;
+		this.costPerUnit = costPerUnit;
 		this.unitUsed = unitUsed;
 		this.supplier = supplier;
 	}
@@ -380,8 +381,5 @@ class Cloth {
 	}
 	public void setClean(boolean clean) {
 		this.clean = clean;
-	}
-	
-
-	
+	}	
 }
