@@ -51,7 +51,7 @@ class Bike extends Vehicle
 	@Override
 	public String toString() {
 		return "Bike [bikeName=" + bikeName + ", bikeType=" + bikeType + ", kmTravel=" + kmTravel + ", usedTime="
-				+ usedTime + ", fuelUsed=" + fuelUsed + ", engine=" + engine + ", gear=" + gear + ", _break=" + _break
+				+ usedTime + ", fuelUsed=" + fuelUsed + ", engine=" + engine + ", gear=" + gear + ", Brake=" + brake
 				+ "]";
 	}
 	
@@ -112,11 +112,11 @@ class Bike extends Vehicle
 	public void setGear(Gear gear) {
 		this.gear = gear;
 	}
-	public Break get_break() {
-		return _break;
+	public Brake get_break() {
+		return brake;
 	}
-	public void set_break(Break _break) {
-		this._break = _break;
+	public void set_break(Brake brake) {
+		this.brake = brake;
 	}
 	
 	
@@ -242,4 +242,4 @@ class Gear{
 		this.gearType = gearType;
 	}
 	 
-	
+}	
